@@ -16,11 +16,7 @@ in order to post a new user to the database. The login endpoint won't work witho
 Only accepts a previously registered name and password.
 #
 
-**Logout --GET**
-/api/auth/logout
 
-logs you session out. A very simple get request.
-#
 #User Endpoints
 
 
