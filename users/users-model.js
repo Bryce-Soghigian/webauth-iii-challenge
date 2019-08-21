@@ -1,5 +1,5 @@
 const db = require('../data/dbConfig.js');
-//Crud + Async stuff.
+
 module.exports = {
 	add,
 	find,
@@ -7,8 +7,14 @@ module.exports = {
 	findById
 };
 
-function find() {
-	return db('users').select('id', 'username', 'password',"department");
+function find(department) {
+	const knexQuery = db('users').select('id', 'username', 'password' , 'department');
+
+	if (department) {
+		knexQuery.where({ department });
+	  }
+
+	  return knexQuery;
 }
 
 function findBy(filter) {
