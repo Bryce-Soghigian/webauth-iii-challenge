@@ -7,7 +7,7 @@ A simple '/' will get this endpoint. This endpoints purpose is used to see if a 
 
 **Register--POST**
 /api/auth/register  
- accepts a username and password
+ accepts a username and password, and department
 in order to post a new user to the database. The login endpoint won't work without a registered user
 #
 

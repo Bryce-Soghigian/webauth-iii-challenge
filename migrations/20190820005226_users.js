@@ -3,7 +3,8 @@ exports.up = function(knex) {
 		users.increments();
 
 		users.text('username', 200).notNullable().unique();
-		users.text('password', 200).notNullable();
+        users.text('password', 200).notNullable();
+        users.text("department", 50);
 	});
 };
 
